@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Intents</string>
+    <string name="google_maps">Google Maps</string>
+    <string name="phone_call">Llamada de teléfono</string>
+    <string name="send_mail">Mandar correo</string>
+    <string name="take_photo">Hacer foto</string>
+    <string name="web_page">Abrir página web</string>
+</resources>
