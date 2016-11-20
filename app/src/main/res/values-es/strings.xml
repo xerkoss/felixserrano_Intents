@@ -6,4 +6,8 @@
     <string name="send_mail">Mandar correo</string>
     <string name="take_photo">Hacer foto</string>
     <string name="web_page">Abrir página web</string>
+    <string name="street_view">Street view</string>
+    <string name="web_search">Búsqueda web</string>
+    <string name="share">Compartir con ..</string>
+    <string name="dialer">Dialer de teléfono</string>
 </resources>

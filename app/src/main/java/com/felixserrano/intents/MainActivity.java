@@ -1,8 +1,10 @@
 package com.felixserrano.intents;
 
 import android.Manifest;
+import android.app.SearchManager;
 import android.content.Intent;
 import android.content.pm.PackageManager;
+import android.content.res.Resources;
 import android.net.Uri;
 import android.os.Build;
 import android.support.v7.app.AppCompatActivity;
@@ -31,6 +33,18 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         Button btn_send_mail = (Button)findViewById(R.id.btn_send_mail);
         btn_send_mail.setOnClickListener(this);
+
+        Button btn_web_search = (Button)findViewById(R.id.btn_web_search);
+        btn_web_search.setOnClickListener(this);
+
+        Button btn_dialer = (Button)findViewById(R.id.btn_dialer);
+        btn_dialer.setOnClickListener(this);
+
+        Button btn_street_view = (Button)findViewById(R.id.btn_street_view);
+        btn_street_view.setOnClickListener(this);
+
+        Button btn_share = (Button)findViewById(R.id.btn_share);
+        btn_share.setOnClickListener(this);
     }
 
     @Override
@@ -51,6 +65,18 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.btn_send_mail:
                 mandarCorreo();
+                break;
+            case R.id.btn_web_search:
+                busquedaWeb();
+                break;
+            case R.id.btn_dialer:
+                dialerTelefono();
+                break;
+            case R.id.btn_street_view:
+                streetView();
+                break;
+            case R.id.btn_share:
+                share();
                 break;
         }
     }
@@ -97,5 +123,31 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         intent.putExtra(Intent.EXTRA_EMAIL,
                 new String[] {"smira@iesperemaria.com" });
         startActivity(intent);
+    }
+
+    private void busquedaWeb(){
+        Intent intent = new Intent(Intent.ACTION_WEB_SEARCH);
+        intent.putExtra(SearchManager.QUERY,"IES Pere Maria Orts");
+        startActivity(intent);
+    }
+
+    private void dialerTelefono()
+    {
+        Intent intent = new Intent(Intent.ACTION_DIAL, Uri.parse("tel:966870700"));
+        startActivity(intent);
+    }
+
+    private void streetView()
+    {
+        Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("google.streetview:cbll=38.553468,0.121579"));
+        startActivity(intent);
+    }
+
+    private void share()
+    {
+        Intent intent = new Intent(Intent.ACTION_SEND);
+        intent.putExtra(Intent.EXTRA_TEXT, "Compartido desde IES Pere Maria Orts.");
+        intent.setType("text/plain");
+        startActivity(Intent.createChooser(intent, getResources().getText(R.string.share)));
     }
 }

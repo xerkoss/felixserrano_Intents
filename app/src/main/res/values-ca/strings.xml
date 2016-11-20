@@ -2,8 +2,12 @@
 <resources>
     <string name="app_name">Intents</string>
     <string name="google_maps">Google Maps</string>
-    <string name="phone_call">Trucada de telefònica</string>
+    <string name="phone_call">Trucada telefònica</string>
     <string name="send_mail">Enviar correu</string>
     <string name="take_photo">Prendre una foto</string>
     <string name="web_page">Obrir pàgina web</string>
+    <string name="street_view">Street view</string>
+    <string name="web_search">Cerca web</string>
+    <string name="share">Compartir amb</string>
+    <string name="dialer">Dialer de teléfon</string>
 </resources>

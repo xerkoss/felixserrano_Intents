@@ -5,4 +5,8 @@
     <string name="google_maps">Google Maps</string>
     <string name="take_photo">Take photo</string>
     <string name="send_mail">Send mail</string>
+    <string name="web_search">Web search</string>
+    <string name="dialer">Phone dialer</string>
+    <string name="street_view">Street view</string>
+    <string name="share">Share with..</string>
 </resources>
